@@ -1,0 +1,65 @@
+body {
+    box-sizing: border-box;
+    background-color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.container {
+    background-image: radial-gradient(circle, blue, yellow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid aqua;
+}
+
+.hand {
+    right: 50%;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transform: rotate(0deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.hour-hand {
+    width: 50px;
+    z-index: 6;
+    background: #61afff;
+
+}
+
+.hand.min-hand {
+    width: 60px;
+    height: 3px;
+    z-index: 3;
+    background: #41ee1a;
+
+}
+
+.hand.second-hand {
+    width: 65px;
+    background: #ee791a;
+    height: 2px;
+}
